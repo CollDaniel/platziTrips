@@ -40,7 +40,7 @@ class DemoTripsCupertino extends StatelessWidget {
           switch (index) {
             case 0:
               return CupertinoTabView(
-                builder: (BuildContext context) => HomeTrips(),
+                builder: (BuildContext context) => const HomeTrips(),
               );
             case 1:
               return CupertinoTabView(

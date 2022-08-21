@@ -11,8 +11,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 void main() {
   Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+      // options: DefaultFirebaseOptions.currentPlatform,
+      );
 
   runApp(const MyApp());
 }
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
         bloc: UserBloc(),
-        child: MaterialApp(
+        child: const MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Demo Trips App',
             home: SignInScreen())

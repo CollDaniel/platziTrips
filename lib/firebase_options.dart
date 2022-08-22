@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -49,21 +43,45 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBuvDyELuR2yu7HgYTTRZ5Xgzb2w3TqJcc',
+    appId: '1:376714589568:web:0b0c0de71bae9acc263d65',
+    messagingSenderId: '376714589568',
+    projectId: 'platzitripsflutter-be5e6',
+    authDomain: 'platzitripsflutter-be5e6.firebaseapp.com',
+    databaseURL: 'https://platzitripsflutter-be5e6-default-rtdb.firebaseio.com',
+    storageBucket: 'platzitripsflutter-be5e6.appspot.com',
+    measurementId: 'G-JPYMZHP6GX',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBiwASXFLfldw2XdWm_ujHdTzrz5_dwooQ',
-    appId: '1:422854269370:android:7d0bb3ee93004c7f626583',
-    messagingSenderId: '422854269370',
-    projectId: 'demotripsapp',
-    storageBucket: 'demotripsapp.appspot.com',
+    apiKey: 'AIzaSyBsofrxBMO4OKQ9UOavv7zJMLCfOv0WeAE',
+    appId: '1:376714589568:android:616d0c5945c10514263d65',
+    messagingSenderId: '376714589568',
+    projectId: 'platzitripsflutter-be5e6',
+    databaseURL: 'https://platzitripsflutter-be5e6-default-rtdb.firebaseio.com',
+    storageBucket: 'platzitripsflutter-be5e6.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyByEI5Ni9G-wGXZK8PqVsJiRX5yW4fqzM8',
-    appId: '1:422854269370:ios:a5df199e00f70e9f626583',
-    messagingSenderId: '422854269370',
-    projectId: 'demotripsapp',
-    storageBucket: 'demotripsapp.appspot.com',
-    iosClientId: '422854269370-avv1icpskectt3fo4qphm0ds35mb9snm.apps.googleusercontent.com',
+    apiKey: 'AIzaSyD5tJ24bx5BA8igtZ5Kn1-AkKsKhdUAuiM',
+    appId: '1:376714589568:ios:3ee9d2311bb079f2263d65',
+    messagingSenderId: '376714589568',
+    projectId: 'platzitripsflutter-be5e6',
+    databaseURL: 'https://platzitripsflutter-be5e6-default-rtdb.firebaseio.com',
+    storageBucket: 'platzitripsflutter-be5e6.appspot.com',
+    iosClientId: '376714589568-mcdgrt79bq3obvst4vqn9hn9rh9e6d21.apps.googleusercontent.com',
+    iosBundleId: 'com.example.demoTripsApp',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyD5tJ24bx5BA8igtZ5Kn1-AkKsKhdUAuiM',
+    appId: '1:376714589568:ios:3ee9d2311bb079f2263d65',
+    messagingSenderId: '376714589568',
+    projectId: 'platzitripsflutter-be5e6',
+    databaseURL: 'https://platzitripsflutter-be5e6-default-rtdb.firebaseio.com',
+    storageBucket: 'platzitripsflutter-be5e6.appspot.com',
+    iosClientId: '376714589568-mcdgrt79bq3obvst4vqn9hn9rh9e6d21.apps.googleusercontent.com',
     iosBundleId: 'com.example.demoTripsApp',
   );
 }

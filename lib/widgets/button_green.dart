@@ -11,7 +11,8 @@ class ButtonGreen extends StatefulWidget {
       required this.width,
       required this.height,
       required this.text,
-      required this.onPressed})
+      required this.onPressed,
+      required EdgeInsets margin})
       : super(key: key);
 
   @override
@@ -32,6 +33,7 @@ class _ButtonGreen extends State<ButtonGreen> {
           top: 30.0,
           left: 20.0,
           right: 20.0,
+          bottom: 30.0,
         ),
         width: widget.width,
         height: widget.height,

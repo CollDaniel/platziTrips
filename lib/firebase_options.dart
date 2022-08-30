@@ -70,7 +70,8 @@ class DefaultFirebaseOptions {
     projectId: 'platzitripsflutter-be5e6',
     databaseURL: 'https://platzitripsflutter-be5e6-default-rtdb.firebaseio.com',
     storageBucket: 'platzitripsflutter-be5e6.appspot.com',
-    iosClientId: '376714589568-mcdgrt79bq3obvst4vqn9hn9rh9e6d21.apps.googleusercontent.com',
+    iosClientId:
+        '376714589568-mcdgrt79bq3obvst4vqn9hn9rh9e6d21.apps.googleusercontent.com',
     iosBundleId: 'com.example.demoTripsApp',
   );
 
@@ -81,7 +82,8 @@ class DefaultFirebaseOptions {
     projectId: 'platzitripsflutter-be5e6',
     databaseURL: 'https://platzitripsflutter-be5e6-default-rtdb.firebaseio.com',
     storageBucket: 'platzitripsflutter-be5e6.appspot.com',
-    iosClientId: '376714589568-mcdgrt79bq3obvst4vqn9hn9rh9e6d21.apps.googleusercontent.com',
+    iosClientId:
+        '376714589568-mcdgrt79bq3obvst4vqn9hn9rh9e6d21.apps.googleusercontent.com',
     iosBundleId: 'com.example.demoTripsApp',
   );
 }

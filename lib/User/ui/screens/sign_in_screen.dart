@@ -68,6 +68,7 @@ class _SignInScreen extends State<SignInScreen> {
               text: "Login with Gmail",
               margin: const EdgeInsets.only(top: 30.0),
               onPressed: () {
+                userBloc.signOut();
                 userBloc.signIn().then((UserCredential user) =>
                     print("El usuario es ${user.user?.uid}"));
               }),

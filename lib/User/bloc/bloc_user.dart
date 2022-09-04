@@ -1,4 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:demo_trips_app/User/repository/auth_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -15,8 +14,10 @@ class UserBloc implements Bloc {
     return authRepository.signInFirebase();
   }
 
-  @override
-  void dispose() {
-    // TODO: implement dispose
+  signOut() {
+    authRepository.signOut();
   }
+
+  @override
+  void dispose() {}
 }

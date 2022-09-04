@@ -1,14 +1,14 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
+import 'package:demo_trips_app/User/model/user.dart';
 import 'package:flutter/material.dart';
 import 'button_bar.dart';
 
+// ignore: must_be_immutable
 class ProfileUserInfo extends StatelessWidget {
-  final pathImage;
-  final userName;
-  final userMail;
+  User user;
 
-  const ProfileUserInfo(
-      {Key? key, this.pathImage, this.userName, this.userMail})
-      : super(key: key);
+  ProfileUserInfo({required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class ProfileUserInfo extends StatelessWidget {
     final name = Container(
       margin: const EdgeInsets.only(left: 20.0),
       child: Text(
-        userName,
+        user.name,
         textAlign: TextAlign.left,
         style: const TextStyle(
             color: Colors.white,
@@ -29,7 +29,7 @@ class ProfileUserInfo extends StatelessWidget {
     final mail = Container(
       margin: const EdgeInsets.only(left: 20.0),
       child: Text(
-        userMail,
+        user.email,
         textAlign: TextAlign.left,
         style: const TextStyle(
             color: Colors.white38, fontFamily: "Red-Hat", fontSize: 13.0),
@@ -47,57 +47,9 @@ class ProfileUserInfo extends StatelessWidget {
       decoration: BoxDecoration(
           border: Border.all(width: 2.5, color: Colors.white),
           shape: BoxShape.circle,
-          image:
-              DecorationImage(fit: BoxFit.cover, image: AssetImage(pathImage))),
+          image: DecorationImage(
+              fit: BoxFit.cover, image: NetworkImage(user.photoURL))),
     );
-
-    // final bookmark = Container(
-    //     width: 30.0,
-    //     height: 30.0,
-    //     decoration:
-    //         const ShapeDecoration(shape: CircleBorder(), color: Colors.white),
-    //     child: const Center(
-    //       child:
-    //           Icon(Icons.bookmark_border, size: 20.0, color: Color(0xFF4268D3)),
-    //     ));
-
-    // final images = Container(
-    //     width: 30.0,
-    //     height: 30.0,
-    //     decoration:
-    //         const ShapeDecoration(shape: CircleBorder(), color: Colors.white54),
-    //     child: const Center(
-    //       child:
-    //           Icon(Icons.image_outlined, size: 20.0, color: Color(0xFF4268D3)),
-    //     ));
-
-    // final agregar = Container(
-    //     width: 50.0,
-    //     height: 50.0,
-    //     decoration:
-    //         const ShapeDecoration(shape: CircleBorder(), color: Colors.white),
-    //     child: const Center(
-    //       child: Icon(Icons.add, size: 40.0, color: Color(0xFF4268D3)),
-    //     ));
-
-    // final mailButton = Container(
-    //     width: 30.0,
-    //     height: 30.0,
-    //     decoration:
-    //         const ShapeDecoration(shape: CircleBorder(), color: Colors.white54),
-    //     child: const Center(
-    //       child: Icon(Icons.mail_outline, size: 20.0, color: Color(0xFF4268D3)),
-    //     ));
-
-    // final profileButton = Container(
-    //     width: 30.0,
-    //     height: 30.0,
-    //     decoration:
-    //         const ShapeDecoration(shape: CircleBorder(), color: Colors.white54),
-    //     child: const Center(
-    //       child:
-    //           Icon(Icons.person_outline, size: 20.0, color: Color(0xFF4268D3)),
-    //     ));
 
     return Column(
       children: [
@@ -112,7 +64,7 @@ class ProfileUserInfo extends StatelessWidget {
         Container(
           alignment: Alignment.center,
           margin: const EdgeInsets.only(top: 12.0, left: 20.0, right: 20.0),
-          child: const ButtonsBar(),
+          child: ButtonsBar(),
           // Row(
           //   children: [
           //     Expanded(child: bookmark),

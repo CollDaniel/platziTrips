@@ -8,14 +8,15 @@ class Profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: todo
     // TODO: implement build
     return Stack(
       children: [
         const GradientBackProfile(),
         Container(
-          margin: EdgeInsets.only(top: 30.0),
+          margin: const EdgeInsets.only(top: 30.0),
           child: (ListView(
-            children: [const HeaderProfile(), CardImageProfileList()],
+            children: [HeaderProfile(), CardImageProfileList()],
           )),
         )
       ],

@@ -33,7 +33,7 @@ class HeaderProfile extends StatelessWidget {
     );
 
     /*
-    // TODO: implement build
+    
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -72,14 +72,13 @@ class HeaderProfile extends StatelessWidget {
         ),
       );
     } else {
-      // ignore: avoid_print
       print("Loggeado");
-      // ignore: avoid_print
+
       print(snapshot.data);
       user = User(
         name: snapshot.data.displayName,
         email: snapshot.data.email,
-        photoURL: snapshot.data.photoUrl,
+        photoURL: snapshot.data.photoURL,
       );
       const title = Text(
         "Profile",
